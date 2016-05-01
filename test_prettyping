@@ -104,6 +104,8 @@ class TestDef():
         prettyping = None
         try:
             print(hr('BEGIN'))
+            sys.stdout.flush()
+            sys.stderr.flush()
             prettyping = subprocess.Popen(cmdline)
             prettyping.wait()
         except KeyboardInterrupt:
