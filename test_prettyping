@@ -79,6 +79,7 @@ class TestDef():
         return [
             './prettyping',
             '--pingbin', os.path.abspath(sys.argv[0]),
+            # prettyping doesn't recognize these, so it passes them through to ${pingbin}
             '--interval', str(OPTIONS.interval),
             '--emulate_ping', str(self.index) if self.index is not None else self.name,
         ]
