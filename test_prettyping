@@ -62,7 +62,7 @@ class TestDef():
                     # No pause.
                     pass
                 else:
-                    raise NotImplementedError('Character "{0}" is not recognized'.format(line[0]))
+                    raise NotImplementedError('Character "{0}" is not recognized in line "{1}"'.format(line[0], line))
                 sys.stdout.write(line[1:] + '\n')
                 sys.stdout.flush()
         except KeyboardInterrupt:
